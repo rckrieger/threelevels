@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Course.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ColideKineticAnimatedUsherWorking.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ColideAnimPlayer.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Map" parent="." index="0" instance=ExtResource( 1 )]
+
+z_as_relative = false
+
+[node name="Colider" parent="Map" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 50, 20 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+
